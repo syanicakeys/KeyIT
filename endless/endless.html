@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title> KEY IT | Endless Mode</title>
 	<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, user-scalable=yes">
+		<link rel="icon" href="../resources/star.png" type="image/icon type">
 		<link rel="stylesheet" href="endless.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-		<title> KEY IT | App Dev Application</title>
 </head>
 
 <body>
+
+<div id="mobileMessage" style="display: none; text-align: center; padding: 20px; font-size: 18px; color: red;">
+    For a better user experience, use desktop.
+</div>
+<div id="content">
 	<div id="gameoverBody">
 		<div class="black">	
 			<div class="gameover">
@@ -40,6 +46,7 @@
 		</div>
 	</div>
 
+	<div id="backBtn" onclick="back()"> <h1> Back </h1></div>
 	<div class="gameScreen">
 		<div class="gameHeader">
 			<div class="leftContent">
@@ -73,7 +80,7 @@
 	<img id="gif-overlay" src="fire.gif" alt="GIF overlay">
 	</div>
 	<div id="footer"></div>
-	
+</div>
 </body>
 
 <script type="text/javascript" src="endless.js"> </script>

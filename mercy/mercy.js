@@ -1,3 +1,17 @@
+
+//--check if mobile
+
+   function isMobile() {
+            return /Mobi|Android|Tablet|iPad|iPhone/i.test(navigator.userAgent);
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            if (isMobile()) {
+                document.getElementById('mobileMessage').style.display = 'block';
+                document.getElementById('content').style.display = 'none';
+            }
+        });
+
 //---CATEGORy ANNOUNCER
 let categoryTime;
 var category = document.getElementById("category");
@@ -187,6 +201,10 @@ function no(){
     window.location.href = "../index.html";
 }
 
+function back(){
+    window.location.href = "../index.html";
+}
+
 //--- END OF STARTING GAME
 
 
@@ -206,7 +224,6 @@ function no(){
 
 //---FUNCTIONS FOR BUTTONS
 function restartGame(){
-
     buttonPress.play();
     startTime = null, currentTime = null, endTime = null, running = true;
     lives = 3;
@@ -243,6 +260,7 @@ function objectSize(){
 }
 
 function mouseGame(){
+    msTimeConverted = initialTime * 1000;
     clickIT.play();
     appearCategory("CLICK IT!")
     document.getElementById("object").innerHTML = "<div id='starImg' onclick='objectClick()'> </div>";
@@ -285,6 +303,7 @@ function objectClick(){
 
 //--- TYPING CATEGORY
 function typingGame() {
+    msTimeConverted = initialTime * 1000;
     typeIT.play();
     appearCategory("TYPE IT!")
     document.getElementById("typingContainer").style.display = "flex";
@@ -408,6 +427,7 @@ var sequence = 4;
 
 var arrowTimeout;
 function arrowGame() {
+    msTimeConverted = initialTime * 1000;
     keyIT.play();
     appearCategory("KEY IT!")
     arrowRandomizer();

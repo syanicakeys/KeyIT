@@ -14,6 +14,18 @@ function endless(){
     window.location.href = "endless/endless.html";
 }
 
+//--check if mobile
+
+   function isMobile() {
+            return /Mobi|Android|Tablet|iPad|iPhone/i.test(navigator.userAgent);
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            if (isMobile()) {
+                document.getElementById('mobileMessage').style.display = 'block';
+                document.getElementById('content').style.display = 'none';
+            }
+        });
 //AUDIOS
 const audioElement = document.getElementById("myAudio"); // Use audioElement
 

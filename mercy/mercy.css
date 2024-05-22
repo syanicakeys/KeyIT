@@ -9,6 +9,26 @@ html{
 	
   }
   
+    #mobileMessage {
+    display: none; /* Hidden by default */
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: red;
+    font-family: "Press Start 2P", sans-serif;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+#content {
+    display: block; /* Visible by default */
+}
+
+  
   .heart{
     height:3vh;
     width:3vh;
@@ -137,6 +157,7 @@ color: white;
     background: url(../playButton.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     width: 18vw;
     height: 5.5vw;
     caret-color: transparent;
@@ -147,8 +168,39 @@ color: white;
     background: url(../playClicked.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     width: 18vw;
     height: 5.5vw;
+  }
+
+  #backBtn h1{
+    margin: 0;
+    font-size: 1vh;
+    color: white;
+}
+
+  #backBtn{
+	z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Press start 2P";
+    color: var(--textColor);
+    background: url(../endlessButton.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 8vw;
+    height: 5vh;
+    caret-color: transparent;
+    cursor: pointer;
+  }
+
+  #backBtn:hover{
+    background: url(../endlessClicked.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   #restartBtn{
@@ -160,6 +212,7 @@ color: white;
     background: url(../playButton.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     width: 18vw;
     height: 5.5vw;
     caret-color: transparent;
@@ -170,6 +223,7 @@ color: white;
     background: url(../playClicked.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     width: 18vw;
     height: 5.5vw;
   }
@@ -186,6 +240,7 @@ color: white;
     height: 100%;
     background: url(../resources/star.png);
     background-size: cover;
+    background-position: center;
     border: 0px;
     cursor: pointer;
     caret-color: transparent;
@@ -195,6 +250,7 @@ color: white;
     background: url(../resources/starClicked.png);
     background-size:cover;
     text-decoration: none;
+    background-position: center;
   }
 
   .leftContent,
@@ -272,11 +328,12 @@ color: white;
   position: absolute;
   color: rgb(94, 9, 20);
   font-family: "press start 2p";
-  width: 6vw;
-  height: 11vh;
-  background: url(clock.png);
-  background-size: contain;
+  width: 4.5vw;
+  height: 9vh;
+  background: url(../resources/clock.png);
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   z-index: 1;
 
 }
@@ -289,7 +346,7 @@ color: white;
   text-align: center;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.5vh;
 }
 
 
